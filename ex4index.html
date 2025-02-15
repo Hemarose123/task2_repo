@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      table {
+        width: 60%;
+        margin: 20px auto;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 8px 12px;
+        text-align: center;
+        border: 1px solid #ddd;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center"></h2>
+
+    <table>
+      <tr>
+        <th>FULL NAME</th>
+        <th></th>
+        <th>AGE</th>
+      </tr>
+      <tr>
+        <td>Fabio</td>
+        <td>clmo</td>
+        <td>20</td>
+      </tr>
+      <tr>
+        <td>Jasmin</td>
+        <td>Brown</td>
+        <td>18</td>
+      </tr>
+      <tr>
+        <td>James</td>
+        <td>Wick</td>
+        <td>35</td>
+      </tr>
+      <tr>
+        <td>Donald</td>
+        <td>Dawn</td>
+        <td>29</td>
+      </tr>
+      <tr>
+        <td><strong>Average Age</strong></td>
+        <td colspan="3"><strong id="averageAge"></strong></td>
+      </tr>
+    </table>
+
+    <script>
+      const ages = [20, 18, 35, 29];
+
+      const totalAge = ages.reduce((acc, age) => acc + age, 0);
+      const averageAge = (totalAge / ages.length).toFixed(2);
+
+      document.getElementById("averageAge").textContent = averageAge;
+    </script>
+  </body>
+</html>
