@@ -53,15 +53,11 @@
         <td><strong>Average Age</strong></td>
         <td colspan="3"><strong id="averageAge"></strong></td>
       </tr>
+      <tr>
+        <td><b>Average Age</b></td>
+        <td></td>
+        <td><b>22</b></td>
+      </tr>
     </table>
-
-    <script>
-      const ages = [20, 18, 35, 29];
-
-      const totalAge = ages.reduce((acc, age) => acc + age, 0);
-      const averageAge = (totalAge / ages.length).toFixed(2);
-
-      document.getElementById("averageAge").textContent = averageAge;
-    </script>
   </body>
 </html>
